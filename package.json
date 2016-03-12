@@ -1,0 +1,36 @@
+{
+  "name": "interactive-starter-template",
+  "version": "0.0.2",
+  "scripts": {
+    "build": "NODE_ENV=production ./node_modules/.bin/reacthtmlpack buildToDir ./public ./views/*.html.js",
+    "clean": "./node_modules/.bin/rimraf ./public/index.html ./public/assets",
+    "dev": "NODE_ENV=development ./node_modules/.bin/reacthtmlpack buildToDir ./public ./views/*.html.js",
+    "prebuild": "npm run clean",
+    "predev": "npm run clean",
+    "prestart": "npm run clean",
+    "start": "NODE_ENV=development ./node_modules/.bin/reacthtmlpack devServer ./Client.webpackConfig.js ./public ./views/*.html.js"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "3.1.0",
+    "babel-core": "5.8.22",
+    "babel-loader": "5.3.2",
+    "css-loader": "0.16.0",
+    "extract-text-webpack-plugin": "0.8.2",
+    "file-loader": "0.8.4",
+    "json-loader": "0.5.3",
+    "raw-loader": "0.5.1",
+    "react-hot-loader": "1.3.0",
+    "reacthtmlpack": "1.2.0",
+    "rimraf": "2.4.3",
+    "style-loader": "0.12.3",
+    "transform-loader": "0.2.3",
+    "webpack": "1.12.2",
+    "webpack-dev-server": "1.12.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.0.16",
+    "node-libs-browser": "0.5.2",
+    "react": "0.14.2",
+    "react-dom": "0.14.2"
+  }
+}
