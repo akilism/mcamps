@@ -13,6 +13,7 @@ export default (
       <title>Hello World</title>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <meta charSet="UTF-8" />
+      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
       <WebpackStyleEntry
         chunkName="client"
         chunkFilepath="../scripts/client.js"
@@ -27,6 +28,7 @@ export default (
         chunkFilepath="../scripts/client.js"
         configFilepath="../Client.webpackConfig.js"
       />
+      <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     </body>
   </html>
 );
