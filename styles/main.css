@@ -1,0 +1,122 @@
+
+body {
+  font-family: 'TradeGothic';
+}
+
+.react-root {
+  vertical-align: top;
+  position: relative;
+}
+
+.map {
+  height: 640px;
+  width: 100vw;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.camp-detail {
+  width: 34%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  vertical-align: top;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 10px;
+  border-radius: 2px;
+  margin: 30px;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.camp-name {
+  font-size: 36px;
+  font-family: 'TradeGothic-BoldCondTwenty';
+  margin-bottom: 15px;
+  line-height: 0.7;
+  border-bottom: 1px solid black;
+}
+
+.camp-info-items li {
+  line-height: 1;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.camp-content-lists {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin: 30px 0 0 0;
+}
+
+.camp-population ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+li.origin {
+  font-size: 12px;
+  width: 47%;
+  display: inline-block;
+  padding: 10px;
+  background-color: #eee;
+  transition: all 500ms;
+}
+
+.origin:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.origins-header {
+  font-weight: bold;
+  margin-top: 10px;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.origin label {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+a label {
+  cursor: pointer;
+}
+
+h2 a {
+  text-decoration: none;
+}
+
+.origin li {
+  margin-bottom: 5px;
+}
+
+.origin li.collapsed {
+  margin-bottom: 0;
+  height: 0;
+}
+
+.origins {
+  transition: height 500ms;
+}
+
+.hidden * {
+  opacity: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.visibile {
+  opacity: 1;
+  height: 300px;
+}
