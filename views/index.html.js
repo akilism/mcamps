@@ -14,7 +14,6 @@ export default (
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
       <meta charSet="UTF-8" />
       <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <WebpackStyleEntry
         chunkName="client"
         chunkFilepath="../scripts/client.js"
