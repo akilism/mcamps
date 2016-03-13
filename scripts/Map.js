@@ -6,12 +6,13 @@ import { ICONS } from "./Icons";
 import { camps } from "./camps";
 import R from "ramda";
 import moment from "moment";
+import d3 from "d3";
 
 export default class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: {type: false, el: null},
+      list: {type: null, visible: false, el: null},
       camp: camps[0],
       campZoom: false,
       showOrigin: false
@@ -160,15 +161,14 @@ export default class Map extends Component {
     evt.preventDefault();
 
     // if(currentType === listType) { this.setState({ list: {type: false, el: null} }); return; }
+    let visible = !this.state.list.visible;
 
-    const listEl = (
-      <div className="content-list">
-        { this.list(listType, items) }
-      </div>
-    );
+    if(currentType !== listType) { visible = true; }
+
     this.setState({
       list: {
-        el: listEl,
+      	el: this.list(listType, items),
+        visible: visible,
         type: listType
       }
     });
@@ -232,10 +232,47 @@ export default class Map extends Component {
     this.setState({ campZoom: false, list: "" });
   }
 
+  getItems(listType, camp) {
+  	switch(listType) {
+  		case LISTTYPE.ARTICLE:
+  			return camp.articles;
+  		case LISTTYPE.PHOTO:
+  			return camp.photos;
+  		case LISTTYPE.VIDEO:
+  			return camp.videos;
+  		default:
+  			return [];
+  	}
+  }
+
+  demographics(types, show) {
+  	const visState = (show && types.length > 0) ? "visible" : "hidden";
+    const className = `demographics ${visState}`;
+    const max = types.reduce((acc, val, idx) => {
+    	return (val.total > acc) ? val.total : acc;
+    }, 0);
+    const scale = d3.scale.linear().domain([0, max]).range([0, 400]);
+    const items = types.map((item) => {
+    	return (
+	  		<li className="population-type" style={{ width: `${scale(item.total)}px` }}>
+	  			{ item.name }: { item.total }
+	  		</li>
+			);
+		});
+
+    return (
+      <ul className={className}>
+        { items }
+      </ul>
+    );
+  }
+
   render() {
     const { camp, campZoom, list, showOrigin } = this.state;
     const origins = this.populationDetails(camp.population.origins, showOrigin);
+    const demographics = this.demographics(camp.population.types, showOrigin);
     const zoomOut = (campZoom) ? (<a href="/" onClick={this.unZoom.bind(this)} className="view-all-camps">View All Camps.</a>) : "";
+    const listEl = (list.visible) ? list.el : "";
 
     return (
       <div className="react-root">
@@ -252,6 +289,7 @@ export default class Map extends Component {
               <a href="/" onClick={ this.toggleOrigins.bind(this) }>
                 <label>Population:</label> { camp.population.total }
               </a>
+              { demographics }
               { origins }
             </li>
           </ul>
@@ -277,7 +315,9 @@ export default class Map extends Component {
           </ul>
           { zoomOut }
         </div>
-        { list.el }
+        <div className="content-list">
+        	{ listEl }
+        </div>
       </div>
     );
   }

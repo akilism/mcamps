@@ -8,6 +8,7 @@ import dispatch11 from "../assets/breaking-borders-dispatch-11.jpg";
 import everyone from "../assets/everyone-will-make-it-one-day.jpg";
 import calais from "../assets/jungle-lips.jpg";
 import unrest from "../assets/macedonia-police-tear-gas-migrants-border-unrest.jpg";
+
 /*
   * Article
   * {
@@ -54,7 +55,7 @@ export const camps = [
       total: 4000,
       types: [{
           name: "Women",
-          total: 3000
+          total: 1000
         },
         {
           name: "Children",
@@ -62,7 +63,7 @@ export const camps = [
         },
         {
           name: "Men",
-          total: 3000
+          total: 3250
         }],
       origins: [{
         name: "Afganistan",
@@ -103,6 +104,14 @@ export const camps = [
       imageUrl: unrest,
       url: "https://news.vice.com/article/migrants-are-being-tear-gassed-in-macedonia-and-france",
       summary: "Police in Macedonia fired tear gas at hundreds of people who stormed the border from Greece and over 1,000 miles to the northwest clashes also broke out at a migrant camp in Calais, northern France."
+    },
+    {
+      title: "We Visited the Lesser-Known French Migrant Camp That's Next in Line for Evictions",
+      date: "04-04-2016",
+      byLine: "Sally Hayden",
+      imageUrl: dunkirk,
+      url: "https://news.vice.com/article/we-visited-the-lesser-known-french-migrant-camp-thats-next-in-line-for-evictions-1",
+      summary: "It's a decisive moment for Europe today as leaders meet with Turkey and try to finally nail down a deal in which Ankara will get billions of euros in return for stemming the flow of migrants."
     }],
     photos: [],
     videos: [{
@@ -138,15 +147,15 @@ export const camps = [
       total: 10000,
       types: [{
           name: "Women",
-          total: 3000
+          total: 150
         },
         {
           name: "Children",
-          total: 4000
+          total: 300
         },
         {
           name: "Men",
-          total: 3000
+          total: 200
         }],
       origins: [{
         name: "Afganistan",
@@ -203,7 +212,8 @@ export const camps = [
     managedBy: "NA",
     population: {
       total: 0,
-      origins: []
+      origins: [],
+      types: []
     },
     articles: [{
       title: "Migrants Sew Their Lips Shut in Protest at Calais 'Jungle' Demolition",
@@ -284,7 +294,8 @@ export const camps = [
     managedBy: "Smugglers",
     population: {
       total: 0,
-      origins: []
+      origins: [],
+      types: []
     },
     articles: [],
     photos: [],
@@ -322,7 +333,7 @@ export const camps = [
         },
         {
           name: "Men",
-          total: 3000
+          total: 2750
         }],
       origins: [{
         name: "Afganistan",
@@ -414,11 +425,11 @@ export const camps = [
       total: 3200,
       types: [{
           name: "Women",
-          total: 3000
+          total: 2990
         },
         {
           name: "Children",
-          total: 4000
+          total: 4500
         },
         {
           name: "Men",
@@ -465,15 +476,15 @@ export const camps = [
       total: 10000,
       types: [{
           name: "Women",
-          total: 3000
+          total: 1200
         },
         {
           name: "Children",
-          total: 4000
+          total: 2300
         },
         {
           name: "Men",
-          total: 3000
+          total: 1450
         }],
       origins: [{
         name: "Afganistan",
