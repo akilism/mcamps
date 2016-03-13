@@ -6,6 +6,7 @@ body {
 .react-root {
   vertical-align: top;
   position: relative;
+  height: 100vh;
 }
 
 .map {
@@ -24,7 +25,7 @@ body {
   vertical-align: top;
   color: black;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px 10px;
+  padding: 20px 10px 10px 10px;
   border-radius: 2px;
   margin: 30px;
   box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
@@ -101,7 +102,10 @@ h2 a {
 
 .view-all-camps {
 	display: inline-block;
-	margin: 15px 0 -10px 0;
+  margin: 15px 0 0 0;
+  font-size: 11px;
+  text-align: right;
+  width: 100%;
 }
 
 .origin li {
@@ -128,4 +132,109 @@ h2 a {
 .visibile {
   opacity: 1;
   height: 300px;
+}
+
+.hide {
+  display: none;
+}
+
+
+.marker-camp-name {
+  font-size: 24px;
+  font-family: 'TradeGothic-BoldCondTwenty';
+  line-height: 0.65;
+  border-bottom: 1px solid black;
+}
+
+.marker-camp-location {
+  margin: 5px 0 -5px 0;
+  font-size: 12px;
+  font-family: 'OpenSans';
+  line-height: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 2px;
+}
+
+.content-list {
+  position: absolute;
+  bottom: 60px;
+  background: white;
+  z-index: 1000;
+  width: 100%;
+  padding: 10px 60px;
+}
+
+.articles {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.list-head {
+  width: 100%;
+  font-family: 'TradeGothic-BoldCondTwenty';
+  font-size: 36px;
+  margin: 25px 0 10px 0;
+  border-bottom: 1px solid black;
+  line-height: 0.65;
+}
+
+.article-item {
+  width: 360px;
+  margin: 0 20px 20px 0;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.article-item:hover .article-title,
+.article-item:hover .article-details {
+  background-color: black;
+  color: white;
+}
+
+.article-title-link {
+  font-size: 16px;
+  font-family: 'TradeGothic-BoldCondTwenty';
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  left: 114px;
+  top: 15px;
+}
+
+.article-title {
+  background: white;
+  padding: 5px;
+  transition: all 250ms;
+}
+
+.article-image-link {
+  flex: 1;
+}
+
+.article-image {
+  width: 50%;
+}
+
+.article-details {
+  font-family: "OpenSans";
+  background: white;
+  width: 70%;
+  line-height: 1.25;
+  float: right;
+  padding: 0 0 5px 5px;
+  transition: all 250ms;
+  color: #8c8c8c;
+}
+
+.article-date {
+  font-size: 12px;
+}
+
+.article-byline {
+  font-size: 12px;
 }
