@@ -377,7 +377,7 @@ h2 a {
 }
 
 .overlay {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -391,7 +391,7 @@ h2 a {
 }
 
 .overlay-inner {
-	width: 60vw;
+	width: 55vw;
 	background-color: white;
 }
 

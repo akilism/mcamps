@@ -53,7 +53,7 @@ import idomeni05 from "../assets/idomeni05.jpg";
 */
 
 export const camps = [
-  { name: "Idomeni Camp",
+  { name: "Idomeni",
     coords: { lat: 41.124358280561225, lng: 22.518914937973022 },
     location: "Idomeni, Kilkis, Greece",
     status: STATUS.ACTIVE,
