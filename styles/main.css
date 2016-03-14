@@ -29,6 +29,7 @@ body {
   padding: 20px 10px 10px 10px;
   border-radius: 2px;
   margin: 30px;
+  z-index: 10000;
   box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
 }
 
@@ -254,4 +255,59 @@ h2 a {
 	line-height: 0.8;
 	margin: 2px 0;
 	padding: 6px 0 2px 4px;
+}
+
+
+.video-item {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 50%;
+}
+
+.video-image-link {
+	display: inline-block;
+	width: 50%;
+	position: relative;
+}
+
+.video-image {
+	width: 100%;
+}
+
+.video-duration {
+	position: absolute;
+	font-family: 'OpenSans';
+	font-size: 14px;
+	bottom: 10px;
+	left: 0;
+	background-color: black;
+	color: white;
+	padding: 5px 10px;
+}
+
+.video-title-link {
+	width: 50%;
+	font-size: 12px;
+  color: black;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.video-title {
+	font-family: 'TradeGothic-BoldCondTwenty';
+	font-size: 22px;
+}
+
+.video-details {
+	color: #8c8c8c;
+	line-height: 1.25;
+}
+
+.video-date {
+
+}
+
+.video-byline {
+
 }

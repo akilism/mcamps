@@ -67,7 +67,7 @@ export default class Map extends Component {
   }
 
   componentDidMount() {
-    this.map = L.map(this.refs["mapElem"]).setView([ 50.973325, 1.883172 ], 15);
+    this.map = L.map(this.refs["mapElem"], { scrollWheelZoom: false }).setView([ 50.973325, 1.883172 ], 15);
 
     this.map.on('click', function(e) {
       console.log(e.latlng);
@@ -121,7 +121,23 @@ export default class Map extends Component {
   }
 
   video(video) {
-    return (<li>{video.title}</li>);
+  	const date = moment(video.date, "MM-DD-YYYY").format("dddd, MMMM Do YYYY");
+    return (
+    	<li className="video-item">
+        <a className="video-image-link" href={ video.url } title={ video.title }>
+          <img className="video-image" src={ video.imageUrl } alt={ video.title } />
+          <div className="video-duration">{ video.duration }</div>
+        </a>
+        <a className="video-title-link" href={ video.url } title={ video.title }>
+          <div className="video-title">{ video.title }</div>
+          <div className="video-details">
+            <div className="video-date">{ date }</div>
+            <div className="video-byline">By { video.byLine }</div>
+          </div>
+        </a>
+
+      </li>
+    );
   }
 
   list(listType, items) {

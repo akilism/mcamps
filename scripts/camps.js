@@ -50,7 +50,7 @@ export const camps = [
     coords: { lat: 41.124358280561225, lng: 22.518914937973022 },
     location: "Idomeni, Kilkis, Greece",
     status: STATUS.ACTIVE,
-    managedBy: "Greek Government",
+    managedBy: "Greek Forces",
     population: {
       total: 4000,
       types: [{
@@ -138,72 +138,34 @@ export const camps = [
       { lat: 41.12518262499779, lng: 22.518094182014465 },
       { lat: 41.125174543239844, lng: 22.51799762248993 }]
   },
-  { name: "Dunkirk",
-    coords: { lat: 51.020599, lng: 2.277731},
-    location: "Grande-Synthe, Dunkirk, France",
-    status: STATUS.ACTIVE,
-    managedBy: "???",
+  { name: "Teteghem",
+    coords: { lat: 51.018207, lng: 2.441253},
+    location: "Teteghem, France",
+    status: STATUS.CLOSED,
+    managedBy: "Smugglers",
     population: {
-      total: 10000,
-      types: [{
-          name: "Women",
-          total: 150
-        },
-        {
-          name: "Children",
-          total: 300
-        },
-        {
-          name: "Men",
-          total: 200
-        }],
-      origins: [{
-        name: "Afganistan",
-        total: 4000,
-        distance: 10300
-      },
-      {
-        name: "Iraq",
-        total: 1500,
-        distance: 6300
-      },
-      {
-        name: "Syria",
-        total: 5500,
-        distance: 5890
-      }]
+      total: 0,
+      origins: [],
+      types: []
     },
-    articles: [{
-      title: "We Visited the Lesser-Known French Migrant Camp That's Next in Line for Evictions",
-      date: "04-04-2016",
-      byLine: "Sally Hayden",
-      imageUrl: dunkirk,
-      url: "https://news.vice.com/article/we-visited-the-lesser-known-french-migrant-camp-thats-next-in-line-for-evictions-1",
-      summary: "It's a decisive moment for Europe today as leaders meet with Turkey and try to finally nail down a deal in which Ankara will get billions of euros in return for stemming the flow of migrants."
-    }],
+    articles: [],
     photos: [],
-    videos: [{
-      show: "Breaking Borders",
-      title: "Dunkirk’s Migrant Crisis: Breaking Borders (Dispatch 9)",
-      date: "03-08-2016",
-      byLine: "VICE News",
-      imageUrl: dispatch9,
-      url: "https://news.vice.com/video/greeces-impending-humanitarian-catastrophe-breaking-borders-dispatch-11",
-      summary: "The French government has agreed to set up new facilities to house migrants and refugees in Dunkirk, yet agencies offering aid to the residents of the camp have described conditions as deplorable and inhumane. Restrictions on what aid agencies can bring into the site, such as construction materials, have hampered efforts to improve conditions.",
-      duration: "06:29"
-    }],
-    poly: [{ lat: 51.02126665787293, lng: 2.276144027709961 },
-      { lat: 51.02113168207555, lng: 2.2757041454315186 },
-      { lat: 51.02082798509467, lng: 2.2757041454315186 },
-      { lat: 51.02020033836347, lng: 2.275972366333008 },
-      { lat: 51.01991688221585, lng: 2.276315689086914 },
-      { lat: 51.02001811675323, lng: 2.2778713703155513 },
-      { lat: 51.0202948233609, lng: 2.279287576675415 },
-      { lat: 51.02089547348458, lng: 2.2796738147735596 },
-      { lat: 51.02138813575457, lng: 2.2794485092163086 },
-      { lat: 51.021732321357426, lng: 2.278268337249756 },
-      { lat: 51.02155685450663, lng: 2.2768521308898926 },
-      { lat: 51.02124641152835, lng: 2.2761011123657227 }]
+    videos: [],
+    poly: [{ lat: 51.018614311449404, lng: 2.4418455362319946 },
+      { lat: 51.018533321385085, lng: 2.4418723583221436 },
+      { lat: 51.01821273432554, lng: 2.4422800540924072 },
+      { lat: 51.0181047466064, lng: 2.4422103166580196 },
+      { lat: 51.01802375565201, lng: 2.441990375518799 },
+      { lat: 51.017963012343394, lng: 2.4414002895355225 },
+      { lat: 51.01790901822446, lng: 2.4410301446914673 },
+      { lat: 51.01796976160384, lng: 2.4409067630767822 },
+      { lat: 51.01811487046576, lng: 2.4408316612243652 },
+      { lat: 51.01824310582622, lng: 2.44071364402771 },
+      { lat: 51.018351093223124, lng: 2.4405956268310547 },
+      { lat: 51.018448956584315, lng: 2.440692186355591 },
+      { lat: 51.018486077115554, lng: 2.4411481618881226 },
+      { lat: 51.01860081311516, lng: 2.4416685104370117 },
+      { lat: 51.018624435197474, lng: 2.441786527633667 }]
   },
   { name: "Calais Jungle",
     coords: { lat: 50.973325, lng: 1.883172},
@@ -287,34 +249,72 @@ export const camps = [
       { lat: 50.974433486044155, lng: 1.8820631504058838 },
       { lat: 50.97446050841692, lng: 1.8824923038482666 }]
   },
-  { name: "Teteghem",
-    coords: { lat: 51.018207, lng: 2.441253},
-    location: "Teteghem, France",
-    status: STATUS.CLOSED,
-    managedBy: "Smugglers",
+  { name: "MSF: Grande-Synthe",
+    coords: { lat: 51.020599, lng: 2.277731},
+    location: "Grande-Synthe, Dunkirk, France",
+    status: STATUS.ACTIVE,
+    managedBy: "Médecins Sans Frontières",
     population: {
-      total: 0,
-      origins: [],
-      types: []
+      total: 10000,
+      types: [{
+          name: "Women",
+          total: 150
+        },
+        {
+          name: "Children",
+          total: 300
+        },
+        {
+          name: "Men",
+          total: 200
+        }],
+      origins: [{
+        name: "Afganistan",
+        total: 4000,
+        distance: 10300
+      },
+      {
+        name: "Iraq",
+        total: 1500,
+        distance: 6300
+      },
+      {
+        name: "Syria",
+        total: 5500,
+        distance: 5890
+      }]
     },
-    articles: [],
+    articles: [{
+      title: "We Visited the Lesser-Known French Migrant Camp That's Next in Line for Evictions",
+      date: "04-04-2016",
+      byLine: "Sally Hayden",
+      imageUrl: dunkirk,
+      url: "https://news.vice.com/article/we-visited-the-lesser-known-french-migrant-camp-thats-next-in-line-for-evictions-1",
+      summary: "It's a decisive moment for Europe today as leaders meet with Turkey and try to finally nail down a deal in which Ankara will get billions of euros in return for stemming the flow of migrants."
+    }],
     photos: [],
-    videos: [],
-    poly: [{ lat: 51.018614311449404, lng: 2.4418455362319946 },
-      { lat: 51.018533321385085, lng: 2.4418723583221436 },
-      { lat: 51.01821273432554, lng: 2.4422800540924072 },
-      { lat: 51.0181047466064, lng: 2.4422103166580196 },
-      { lat: 51.01802375565201, lng: 2.441990375518799 },
-      { lat: 51.017963012343394, lng: 2.4414002895355225 },
-      { lat: 51.01790901822446, lng: 2.4410301446914673 },
-      { lat: 51.01796976160384, lng: 2.4409067630767822 },
-      { lat: 51.01811487046576, lng: 2.4408316612243652 },
-      { lat: 51.01824310582622, lng: 2.44071364402771 },
-      { lat: 51.018351093223124, lng: 2.4405956268310547 },
-      { lat: 51.018448956584315, lng: 2.440692186355591 },
-      { lat: 51.018486077115554, lng: 2.4411481618881226 },
-      { lat: 51.01860081311516, lng: 2.4416685104370117 },
-      { lat: 51.018624435197474, lng: 2.441786527633667 }]
+    videos: [{
+      show: "Breaking Borders",
+      title: "Dunkirk’s Migrant Crisis: Breaking Borders (Dispatch 9)",
+      date: "03-08-2016",
+      byLine: "VICE News",
+      imageUrl: dispatch9,
+      url: "https://news.vice.com/video/greeces-impending-humanitarian-catastrophe-breaking-borders-dispatch-11",
+      summary: "The French government has agreed to set up new facilities to house migrants and refugees in Dunkirk, yet agencies offering aid to the residents of the camp have described conditions as deplorable and inhumane. Restrictions on what aid agencies can bring into the site, such as construction materials, have hampered efforts to improve conditions.",
+      duration: "06:29"
+    }],
+    poly: [{ lat: 51.02126665787293, lng: 2.276144027709961 },
+      { lat: 51.02113168207555, lng: 2.2757041454315186 },
+      { lat: 51.02082798509467, lng: 2.2757041454315186 },
+      { lat: 51.02020033836347, lng: 2.275972366333008 },
+      { lat: 51.01991688221585, lng: 2.276315689086914 },
+      { lat: 51.02001811675323, lng: 2.2778713703155513 },
+      { lat: 51.0202948233609, lng: 2.279287576675415 },
+      { lat: 51.02089547348458, lng: 2.2796738147735596 },
+      { lat: 51.02138813575457, lng: 2.2794485092163086 },
+      { lat: 51.021732321357426, lng: 2.278268337249756 },
+      { lat: 51.02155685450663, lng: 2.2768521308898926 },
+      { lat: 51.02124641152835, lng: 2.2761011123657227 }]
   },
   { name: "Kara Tepe",
     coords: { lat: 39.1274552440952, lng: 26.54295265674591 },
