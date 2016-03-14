@@ -15,7 +15,8 @@ export default class Map extends Component {
       list: {type: null, visible: false, el: null},
       camp: camps[0],
       campZoom: false,
-      showOrigin: false
+      showOrigin: false,
+      largePhoto: null
     };
     this.map = null;
     this.tileLayer = null;
@@ -97,8 +98,6 @@ export default class Map extends Component {
   }
 
   article(article) {
-    const date = moment(article.date, "MM-DD-YYYY").format("dddd, MMMM Do YYYY");
-
     return (
       <li className="article-item">
         <a className="article-image-link" href={ article.url } title={ article.title }>
@@ -107,7 +106,7 @@ export default class Map extends Component {
         <a className="article-title-link" href={ article.url } title={ article.title }>
           <div className="article-title">{ article.title }</div>
           <div className="article-details">
-            <div className="article-date">{ date }</div>
+            <div className="article-date">{ this.date(article.date) }</div>
             <div className="article-byline">By { article.byLine }</div>
           </div>
         </a>
@@ -116,12 +115,27 @@ export default class Map extends Component {
     );
   }
 
+  showPhoto(photo, evt) {
+  	evt.preventDefault();
+  	this.setState({ largePhoto: photo });
+  }
+
   photo(photo) {
-    return (<li><img src={photo.url} alt={photo.caption || photo.title} /></li>);
+    return (
+    	<li style={{ backgroundImage: `url(${ photo.url })` }} className="photo-item">
+    		<a onClick={ this.showPhoto.bind(this, photo) } href={ photo.galleryUrl } title={ photo.series }>
+	    		<div className="photo-details">
+	    			<div className="photo-series">{ photo.series }</div>
+	    			<div className="photo-caption">{ photo.caption }</div>
+	    			<div className="photo-date">{ this.date(photo.date) }</div>
+	    			<div className="photo-byline">Photo: { photo.byLine }</div>
+	    		</div>
+	    	</a>
+    	</li>
+    );
   }
 
   video(video) {
-  	const date = moment(video.date, "MM-DD-YYYY").format("dddd, MMMM Do YYYY");
     return (
     	<li className="video-item">
         <a className="video-image-link" href={ video.url } title={ video.title }>
@@ -131,7 +145,7 @@ export default class Map extends Component {
         <a className="video-title-link" href={ video.url } title={ video.title }>
           <div className="video-title">{ video.title }</div>
           <div className="video-details">
-            <div className="video-date">{ date }</div>
+            <div className="video-date">{ this.date(video.date) }</div>
             <div className="video-byline">By { video.byLine }</div>
           </div>
         </a>
@@ -145,7 +159,7 @@ export default class Map extends Component {
 
     switch(listType) {
       case LISTTYPE.ARTICLE:
-        const articles = items.map(this.article);
+        const articles = items.map(this.article.bind(this));
         return (
           <ul className="articles">
             <li className="list-head">Articles</li>
@@ -153,7 +167,7 @@ export default class Map extends Component {
           </ul>
         );
       case LISTTYPE.PHOTO:
-        const photos = items.map(this.photo);
+        const photos = items.map(this.photo.bind(this));
         return (
           <ul className="photos">
             <li className="list-head">Photos</li>
@@ -161,7 +175,7 @@ export default class Map extends Component {
           </ul>
         );
       case LISTTYPE.VIDEO:
-        const videos = items.map(this.video);
+        const videos = items.map(this.video.bind(this));
         return (
           <ul className="videos">
             <li className="list-head">Videos</li>
@@ -283,12 +297,35 @@ export default class Map extends Component {
     );
   }
 
+  date(dateStr) {
+  	return moment(dateStr, "MM-DD-YYYY").format("dddd, MMMM Do YYYY");
+  }
+
+  photoOverlay(photo) {
+  	return (
+  		<div className="overlay" onClick={() => { this.setState({ largePhoto: null }); }}>
+  			<div className="overlay-inner">
+	  			<img src={ photo.url } alt={ photo.caption } className="overlay-image" />
+					<div className="overlay-details">
+						<a className="overlay-link" href={ photo.galleryUrl } title={ photo.series }>
+							<div className="overlay-series">{ photo.series }</div>
+						</a>
+						<div className="overlay-date">{ this.date(photo.date) }</div>
+						<div className="overlay-byline">Photo: { photo.byLine }</div>
+		  			<div className="overlay-caption">{ photo.caption }</div>
+		  		</div>
+	  		</div>
+  		</div>
+  	);
+  }
+
   render() {
-    const { camp, campZoom, list, showOrigin } = this.state;
+    const { camp, campZoom, largePhoto, list, showOrigin } = this.state;
     const origins = this.populationDetails(camp.population.origins, showOrigin);
     const demographics = this.demographics(camp.population.types, showOrigin);
     const zoomOut = (campZoom) ? (<a href="/" onClick={this.unZoom.bind(this)} className="view-all-camps">View All Camps.</a>) : "";
     const listEl = (list.visible) ? list.el : "";
+    const photoOverlay = (largePhoto) ? this.photoOverlay(largePhoto) : "";
 
     return (
       <div className="react-root">
@@ -331,9 +368,10 @@ export default class Map extends Component {
           </ul>
           { zoomOut }
         </div>
-        <div className="content-list">
+        <div className="content-list" style={{ display: (list.visible) ? "block" : "none" }}>
         	{ listEl }
         </div>
+        { photoOverlay }
       </div>
     );
   }

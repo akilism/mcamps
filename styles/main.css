@@ -17,6 +17,15 @@ body {
   vertical-align: top;
 }
 
+a {
+	color: black;
+}
+
+a:hover {
+	color: #0044cc !important;
+	transition: color 250ms;
+}
+
 .camp-detail {
   width: 34%;
   position: absolute;
@@ -310,4 +319,121 @@ h2 a {
 
 .video-byline {
 
+}
+
+.photos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.photo-item {
+	width: 31%;
+	margin: 0 20px 20px 0;
+	height: 240px;
+	position: relative;
+	background-size: cover;
+}
+
+.photo-item .photo-details {
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 100%;
+  font-size: 12px;
+  font-family: "OpenSans";
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+
+.photo-item:hover .photo-details {
+	opacity: 1;
+}
+
+
+.photo-series {
+	font-family: "TradeGothic-BoldCondTwenty";
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.photo-caption {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	padding: 0 10px;
+	line-height: 1.25;
+}
+
+.photo-date {
+	margin-bottom: 5px;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.45);
+	cursor: pointer;
+	z-index: 10000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.overlay-inner {
+	width: 60vw;
+	background-color: white;
+}
+
+.overlay-details {
+	padding: 0 10px 10px 10px;
+}
+
+.overlay-link {
+	text-decoration: none;
+}
+
+.overlay-image {
+	width: 100%;
+	margin: 0 0 5px 0;
+	border: 10px solid black;
+	border-bottom-width: 0;
+}
+
+.overlay-series {
+	font-family: "TradeGothic-BoldCondTwenty";
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.overlay-date {
+	display: inline-block;
+	margin-right: 10px;
+	line-height: 1.25;
+	color: #8c8c8c;
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+
+.overlay-byline {
+	display: inline-block;
+	line-height: 1.25;
+	color: #8c8c8c;
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+
+.overlay-caption {
+	line-height: 1.25;
 }

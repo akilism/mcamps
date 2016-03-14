@@ -9,6 +9,13 @@ import everyone from "../assets/everyone-will-make-it-one-day.jpg";
 import calais from "../assets/jungle-lips.jpg";
 import unrest from "../assets/macedonia-police-tear-gas-migrants-border-unrest.jpg";
 
+import idomeni00 from "../assets/idomeni00.jpg";
+import idomeni01 from "../assets/idomeni01.jpg";
+import idomeni02 from "../assets/idomeni02.jpg";
+import idomeni03 from "../assets/idomeni03.jpg";
+import idomeni04 from "../assets/idomeni04.jpg";
+import idomeni05 from "../assets/idomeni05.jpg";
+
 /*
   * Article
   * {
@@ -52,18 +59,18 @@ export const camps = [
     status: STATUS.ACTIVE,
     managedBy: "Greek Forces",
     population: {
-      total: 4000,
+      total: 6000,
       types: [{
           name: "Women",
-          total: 1000
+          total: 1200
         },
         {
           name: "Children",
-          total: 4000
+          total: 3000
         },
         {
           name: "Men",
-          total: 3250
+          total: 1800
         }],
       origins: [{
         name: "Afganistan",
@@ -107,13 +114,60 @@ export const camps = [
     },
     {
       title: "We Visited the Lesser-Known French Migrant Camp That's Next in Line for Evictions",
-      date: "04-04-2016",
+      date: "03-04-2016",
       byLine: "Sally Hayden",
       imageUrl: dunkirk,
       url: "https://news.vice.com/article/we-visited-the-lesser-known-french-migrant-camp-thats-next-in-line-for-evictions-1",
       summary: "It's a decisive moment for Europe today as leaders meet with Turkey and try to finally nail down a deal in which Ankara will get billions of euros in return for stemming the flow of migrants."
     }],
-    photos: [],
+    photos: [{
+    	series: "In Photos: Inside Greece's Idomeni Camp, Where 13,000 Migrants Are Stuck in Purgatory",
+    	date: "03-12-2016",
+    	byLine: "Harriet Salem/VICE News",
+    	url: idomeni00,
+    	galleryUrl: "https://news.vice.com/article/photos-inside-greeces-idomeni-camp-where-13000-migrants-are-stuck-in-purgatory",
+    	caption: "Migrants wait next to the border fence at Idomeni hoping to pass from Greece to Macedonia. More than 14,000 people are currently camped out here hoping to reach Western Europe."
+    },
+    {
+    	series: "In Photos: Inside Greece's Idomeni Camp, Where 13,000 Migrants Are Stuck in Purgatory",
+    	date: "03-12-2016",
+    	byLine: "Harriet Salem/VICE News",
+    	url: idomeni01,
+    	galleryUrl: "https://news.vice.com/article/photos-inside-greeces-idomeni-camp-where-13000-migrants-are-stuck-in-purgatory",
+    	caption: "Heavy rainfall over the last week has flooded parts of the camp, where many migrants stay in flimsy tents not designed for bad weather conditions."
+    },
+    {
+    	series: "In Photos: Inside Greece's Idomeni Camp, Where 13,000 Migrants Are Stuck in Purgatory",
+    	date: "03-12-2016",
+    	byLine: "Pete Kiehart",
+    	url: idomeni02,
+    	galleryUrl: "https://news.vice.com/article/photos-inside-greeces-idomeni-camp-where-13000-migrants-are-stuck-in-purgatory",
+    	caption: "A migrant grabs at the wire fence on the Greek side of the border. The Macedonian authorities closed the border to migrants on Monday, effectively sealing the so-called 'Balkan Route'."
+    },
+    {
+    	series: "In Photos: Inside Greece's Idomeni Camp, Where 13,000 Migrants Are Stuck in Purgatory",
+    	date: "03-12-2016",
+    	byLine: "Harriet Salem/VICE News",
+    	url: idomeni03,
+    	galleryUrl: "https://news.vice.com/article/photos-inside-greeces-idomeni-camp-where-13000-migrants-are-stuck-in-purgatory",
+    	caption: "Migrants hold a protest in the center of the Idomeni camp chanting \"Mama Merkel\" and waving the German flag."
+    },
+    {
+    	series: "In Photos: Inside Greece's Idomeni Camp, Where 13,000 Migrants Are Stuck in Purgatory",
+    	date: "03-12-2016",
+    	byLine: "Harriet Salem/VICE News",
+    	url: idomeni04,
+    	galleryUrl: "https://news.vice.com/article/photos-inside-greeces-idomeni-camp-where-13000-migrants-are-stuck-in-purgatory",
+    	caption: "Riot police stand guard at Idomeni camp on the railway tracks leading up to the border. "
+    },
+    {
+    	series: "In Photos: Inside Greece's Idomeni Camp, Where 13,000 Migrants Are Stuck in Purgatory",
+    	date: "03-12-2016",
+    	byLine: "Harriet Salem/VICE News",
+    	url: idomeni05,
+    	galleryUrl: "https://news.vice.com/article/photos-inside-greeces-idomeni-camp-where-13000-migrants-are-stuck-in-purgatory",
+    	caption: "Children sit inside their tent in a muddy field at Idomeni camp. Many of migrants staying here have only flimsy tents that are not meant for bad weather conditions."
+    }],
     videos: [{
       show: "Breaking Borders",
       title: "Greece's Impending Humanitarian Catastrophe: Breaking Borders (Dispatch 11)",
