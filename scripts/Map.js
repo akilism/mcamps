@@ -251,7 +251,7 @@ export default class Map extends Component {
     	this.poly.redraw();
     }
 
-    this.map.setView(camp.coords, 16);
+    this.map.setView(camp.coords, 15);
     this.setState({ camp, campZoom: true });
   };
 

@@ -568,5 +568,103 @@ export const camps = [
       { lat: 38.28625656931559, lng: 38.45500230789184 },
       { lat: 38.28629025463493, lng: 38.45442295074463 },
       { lat: 38.286222883980656, lng: 38.45414400100708 }]
+  },
+  { name: "Zaatari Refugee Camp",
+    coords: { lat: 32.293154887987384, lng: 36.32801055908203 },
+    location: "Zaatari, Mafraq, Jordan",
+    status: STATUS.ACTIVE,
+    managedBy: "Jordanian Government",
+    population: {
+      total: 79000,
+      types: [{
+          name: "Women",
+          total: 19500
+        },
+        {
+          name: "Children",
+          total: 35000
+        },
+        {
+          name: "Men",
+          total: 24500
+        }],
+      origins: [{
+        name: "Afganistan",
+        total: 1000,
+        distance: 2300
+      },
+      {
+        name: "Iraq",
+        total: 3000,
+        distance: 900
+      },
+      {
+        name: "Syria",
+        total: 6000,
+        distance: 790
+      }]
+    },
+    articles: [],
+    photos: [],
+    videos: [],
+    poly: [{ lat: 32.301462041538734, lng: 36.33024215698242 },
+				{ lat: 32.303493369345574, lng: 36.316895484924316 },
+				{ lat: 32.29692766344201, lng: 36.31247520446777 },
+				{ lat: 32.29471480457053, lng: 36.311960220336914 },
+				{ lat: 32.28724147210595, lng: 36.31831169128418 },
+				{ lat: 32.28466556914632, lng: 36.3257360458374 },
+				{ lat: 32.28364969997411, lng: 36.329684257507324 },
+				{ lat: 32.28179933759961, lng: 36.335134506225586 },
+				{ lat: 32.280674589081315, lng: 36.33998394012451 },
+				{ lat: 32.283032916710596, lng: 36.34122848510742 },
+				{ lat: 32.290252646177805, lng: 36.342902183532715 },
+				{ lat: 32.2919577244985, lng: 36.34320259094238 },
+				{ lat: 32.29417065067152, lng: 36.343889236450195 },
+				{ lat: 32.30120812236143, lng: 36.33105754852295 }]
+  },
+  { name: "Mrajeeb Al Fhood Refugee Camp",
+    coords: { lat: 32.030523, lng: 36.189357 },
+    location: "Mrajeeb Al Fhood, Al Zarqa, Jordan",
+    status: STATUS.ACTIVE,
+    managedBy: "Jordanian Government",
+    population: {
+      total: 4200,
+      types: [{
+          name: "Women",
+          total: 1200
+        },
+        {
+          name: "Children",
+          total: 2300
+        },
+        {
+          name: "Men",
+          total: 1450
+        }],
+      origins: [{
+        name: "Afganistan",
+        total: 100,
+        distance: 2300
+      },
+      {
+        name: "Iraq",
+        total: 500,
+        distance: 900
+      },
+      {
+        name: "Syria",
+        total: 3600,
+        distance: 790
+      }]
+    },
+    articles: [],
+    photos: [],
+    videos: [],
+    poly: [{ lat: 32.0369477243195, lng: 36.181068420410156 },
+			{ lat: 32.03831194927726, lng: 36.18864297866821 },
+			{ lat: 32.02978066201025, lng: 36.19093894958496 },
+			{ lat: 32.028325352423664, lng: 36.183321475982666 }]
   }
 ];
+
+// 32.295667, 36.32375
